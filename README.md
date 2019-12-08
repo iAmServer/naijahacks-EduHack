@@ -9,11 +9,11 @@
 
 # Problem
 
-Unavailablity of platform where lecturer can easily reach a student to inform them about the feasibility of a day lecturer and or to request of them a tools or book for the lecture.
+Secondary school student tends to be short sighted when preparing for admission into higher institution. Most of them believe that the only courses worth studying are Medicine, Law and Banking and Finance. This make them waste time when looking for admission and some of them end up getting admitted to study the course they don't like. The student are ignorant of prospective opportunity in other courses.
 
 # Proposed Solution
 
-A mobile application with artificial inteligent capability to foster communication better students and lecturers
+We are developing an early career introduction platform for secondary school student. Where student can search for course information,  guide for getting admitted for the course, job prospect for them after graduation and opportunity to meet industrial expert.
 
 # Proposed Stack
 
