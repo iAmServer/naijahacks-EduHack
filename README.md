@@ -5,7 +5,7 @@
 ### Team Members
 
 - Egbeyemi Oladayo, dasther@outlook.com
-- Haruna, samlak1999@gmail.com
+- Salami Haruna, samlak1999@gmail.com
 
 
 # Problem
