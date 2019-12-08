@@ -4,8 +4,8 @@
 
 ### Team Members
 
-- Egbeyemi Oladayo, dasther@outlook.com
-- Salami Haruna, samlak1999@gmail.com
+- Egbeyemi Oladayo, dasther@outlook.com, Backend
+- Salami Haruna, samlak1999@gmail.com, Frontend and Integration
 
 
 # Problem
