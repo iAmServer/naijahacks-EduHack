@@ -1,0 +1,23 @@
+ion-header{
+    ion-title{
+        font-size: small;
+    }
+    ion-label{
+        font-size: small;
+        font-weight: lighter;
+    }
+}
+ion-content{
+    --background: #fafafa;
+    ion-label{
+        font-size: small;
+        font-weight: lighter;
+    }
+    ion-col{
+        padding: 0;
+        margin:0;
+    }
+    ion-slide {  
+        height: calc(100vh - 140px);  
+    }
+}

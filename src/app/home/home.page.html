@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      EduHack
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card routerLink="/test" routerDirection="root">
+          <ion-card-header class="ion-text-center">
+            <ion-card-subtitle>Saved</ion-card-subtitle>
+            <ion-card-title>Course</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card routerLink="/person" routerDirection="root">
+          <ion-card-header class="ion-text-center">
+            <ion-card-subtitle>Take</ion-card-subtitle>
+            <ion-card-title>Test</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <div class="ion-padding">
+      <ion-label>Community Post</ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card routerLink="/messages" routerDirection="forward">
+              <ion-item lines="none">
+                <ion-avatar slot="start">
+                  <img src="https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_960_720.png" />
+                </ion-avatar>
+                <ion-label>
+                  <h2>Adams Smith - Google</h2>
+                  <p class="location">Lagos, Nigeria</p>
+                </ion-label>
+              </ion-item>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-card routerLink="/messages" routerDirection="forward">
+              <ion-item lines="none">
+                <ion-avatar slot="start">
+                  <img src="https://cdn.pixabay.com/photo/2016/08/20/05/36/avatar-1606914_960_720.png" />
+                </ion-avatar>
+                <ion-label>
+                  <h2>Kate Street - Airbnb</h2>
+                  <p class="location">Lagos, Nigeria</p>
+                </ion-label>
+              </ion-item>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+</ion-content>
