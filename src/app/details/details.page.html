@@ -3,8 +3,8 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      EduHack - Software Engineer
+    <ion-title *ngIf="courses" >
+      EduHack - {{courses.course.name}}
     </ion-title>
     <ion-buttons slot="primary">
       <ion-button (click)="save()"  slot="end">

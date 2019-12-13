@@ -28,7 +28,7 @@ const routes: Routes = [
     loadChildren: () => import('./test/test.module').then( m => m.TestPageModule)
   },
   {
-    path: 'details',
+    path: 'details/:id',
     loadChildren: () => import('./details/details.module').then( m => m.DetailsPageModule)
   },
   {
@@ -38,6 +38,10 @@ const routes: Routes = [
   {
     path: 'developer',
     loadChildren: () => import('./developer/developer.module').then( m => m.DeveloperPageModule)
+  },
+  {
+    path: 'search',
+    loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
   }
 ];
 

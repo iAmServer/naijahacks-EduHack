@@ -4,7 +4,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      EduHack - Courses
+      EduHack - Search Course
     </ion-title>
     <ion-buttons slot="primary">
       <ion-button routerLink="/search" slot="end">
@@ -16,6 +16,8 @@
 
 <ion-content>
   <div class="ion-padding">
+    <ion-label>Search Course</ion-label>
+    <input ion-input type="search" color="light" placeholder="Search course" />
     <ion-label>Courses</ion-label>
     <ion-grid *ngFor="let item of courses" >
       <ion-row>
