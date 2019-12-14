@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      EduHack
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid style="margin-top: 15px;padding: 30px;">
+    <ion-row>
+      <ion-col>
+        <ion-card routerLink="/test" routerDirection="root" class="white">
+          <ion-card-header class="ion-text-center">
+            <ion-card-subtitle>Saved</ion-card-subtitle>
+            <ion-card-title>Course</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card routerLink="/person" routerDirection="root" class="white">
+          <ion-card-header class="ion-text-center">
+            <ion-card-subtitle>Take</ion-card-subtitle>
+            <ion-card-title>Test</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="ion-padding">
+      <ion-label>Community Post</ion-label>
+      <ion-grid *ngFor="let item of post"  >
+        <ion-row>
+          <ion-col>
+            <ion-card (click)="alert('Hello World')">
+              <ion-item lines="none">
+                <ion-avatar slot="start">
+                  <img src="https://cdn.imgbin.com/8/10/16/imgbin-linkedin-computer-icons-logo-social-networking-service-facebook-Sisn3fJcafcZL7ZYinA2mfWaB.jpg" />
+                </ion-avatar>
+                <h2>{{item.title}}</h2>
+              </ion-item>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+</ion-content>

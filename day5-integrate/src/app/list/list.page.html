@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      EduHack - Courses
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button routerLink="/search" slot="end">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-label>Courses</ion-label>
+    <ion-grid *ngFor="let item of courses" >
+      <ion-row>
+        <ion-col>
+          <ion-card routerLink="/details/{{item.id}}" routerDirection="root">
+            <ion-item lines="none">
+              <ion-label>
+                <h2>{{item.name}}</h2>
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </div>
+</ion-content>

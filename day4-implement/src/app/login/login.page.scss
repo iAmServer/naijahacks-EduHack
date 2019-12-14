@@ -1,0 +1,52 @@
+h3{
+    font-weight: lighter;
+    font-size: 25px;
+    margin: 0;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+p{
+    margin: 0;
+    font-weight: lighter;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 35px;
+}
+
+form{
+    padding: 20px;
+    margin-top: 70px;
+}
+
+input{
+    border: 0;
+    background: rgb(235, 232, 232);
+    padding: 15px !important;
+    width: 100%;
+    font-weight: lighter;
+    font-size: 15px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+
+    &::-webkit-input-placeholder { /* Edge */
+        font-weight: lighter;
+        font-size: 15px;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        font-weight: lighter;
+        font-size: 15px;
+    }  
+    &::placeholder {
+        font-weight: lighter;
+        font-size: 15px;
+    }
+}
+
+input:focus{
+    outline: none;
+    border: 0;
+}
+
+a{
+    color: #000;
+}

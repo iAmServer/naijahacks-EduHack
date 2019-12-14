@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      EduHack - Software Engineer
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="save()"  slot="end">
+        <ion-icon slot="icon-only" [name]="isSave ? 'heart' : 'heart-empty'"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-segment color="dark" (ionChange)="segmentChanged($event)" [(ngModel)]="segment">
+    <ion-segment-button value="0">
+      <ion-label>About</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="1">
+      <ion-label>School</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="2">
+      <ion-label>Job</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    
+  </div>
+
+  <ion-slides #slides (ionSlideDidChange)="slideChanged()">  
+    <ion-slide>First Segment</ion-slide>  
+    <ion-slide>Second Segment</ion-slide>  
+    <ion-slide>Third Segment</ion-slide>  
+  </ion-slides> 
+</ion-content>

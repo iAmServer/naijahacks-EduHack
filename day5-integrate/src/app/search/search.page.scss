@@ -1,0 +1,67 @@
+ion-header{
+    ion-title{
+        font-size: small;
+    }
+}
+ion-content{
+    --background: #fafafa;
+    ion-label{
+        font-size: small;
+        font-weight: lighter;
+    }
+    ion-col{
+        padding: 0;
+        margin:0;
+    }
+    ion-card{
+        border: 0;
+        box-shadow: none;
+        border-radius: 5px;
+        margin-top: 3px;
+        -webkit-box-shadow: 0px 0px 7px -5px rgba(26,25,26,1);
+        -moz-box-shadow: 0px 0px 7px -5px rgba(26,25,26,1);
+        box-shadow: 0px 0px 7px -5px rgba(26,25,26,1);
+        h2{
+            font-size: small;
+        }
+        p{
+            font-size: x-small;
+            margin: 0;
+            line-height: unset;
+        }
+        p.location{
+            font-size: xx-small;
+        }
+    }
+    input{
+        border: 0;
+        background:#FFF;
+        padding: 15px !important;
+        width: 95%;
+        font-weight: lighter;
+        font-size: 15px;
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        box-shadow: none;
+        -webkit-box-shadow: 0px 0px 7px -5px rgba(26,25,26,1);
+        -moz-box-shadow: 0px 0px 7px -5px rgba(26,25,26,1);
+        box-shadow: 0px 0px 7px -5px rgba(26,25,26,1);
+        &:focus{
+            outline: none;
+        }
+        &::-webkit-input-placeholder { /* Edge */
+            font-weight: lighter;
+            font-size: 15px;
+        }
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            font-weight: lighter;
+            font-size: 15px;
+        }  
+        &::placeholder {
+            font-weight: lighter;
+            font-size: 15px;
+        }
+    }
+}

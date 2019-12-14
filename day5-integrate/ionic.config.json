@@ -1,0 +1,7 @@
+{
+  "name": "EduHack",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
