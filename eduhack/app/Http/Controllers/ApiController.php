@@ -64,7 +64,7 @@ class ApiController extends Controller
 
     public function savedSearch(Request $request)
     { 
-        $savedSearches = SavedSearch::where('user_id', $request->user_id)->get();
+        $savedSearches = SavedSearch::where('user_id', 1)->get();
         foreach ($savedSearches as $course) {
             $courses = $course->course->get();
         }
@@ -84,16 +84,22 @@ class ApiController extends Controller
     { 
         $searches = Course::where('name', 'like',  '%'.$request->search.'%')->orWhere('keyword', 'like',  '%'.$request->search.'%')->orWhere('description', 'like',  '%'.$request->search.'%')
         ->orWhere('work', 'like',  '%'.$request->search.'%')->get();
-        return response()->json([
-            'searches' => $searches
-        ], 200);
+        if($searches->count() > 0){
+            return response()->json([
+                'searches' => $searches
+            ], 200);
+        }else{
+            return response()->json([
+                'searches' => 'No search found'
+            ], 200);
+        }
     }
     
     public function createCourse(Request $request)
     {   
         $course = Course::create([
             'name' => $request->course_name,
-            'user_id' => $request->user_id,
+            'user_id' => 1,
             'keyword' => $request->course_keyword,
             'description' => $request->course_description,
             'work' => $request->course_work,
@@ -162,6 +168,18 @@ class ApiController extends Controller
 
         }
 
+        if($request->school_id != ''){
+            $course_offered = CourseOffered::create([
+            'course_id' => $last_course->id,
+            'school_id' => $request->school_id,
+            ]);
+        }else{
+            $course_offered = CourseOffered::create([
+            'course_id' => $last_course->id,
+            'school_id' => 3,
+            ]);
+        }
+
         if($request->expert_url != '' || $request->expert_name != ''){
             $expert = Expert::create([
             'course_id' => $last_course->id,
@@ -220,6 +238,7 @@ class ApiController extends Controller
             $input['cost'] = $request->training_cost;
             $training->update($input);
         }
+
         if($request->expert_url != '' || $request->expert_name != ''){
             $expert = Expert::where('course_id', $id)->first();
             $input['url'] = $request->expert_url;
