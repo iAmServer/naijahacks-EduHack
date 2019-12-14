@@ -10,10 +10,10 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid>
+  <ion-grid style="margin-top: 15px;padding: 30px;">
     <ion-row>
       <ion-col>
-        <ion-card routerLink="/test" routerDirection="root">
+        <ion-card routerLink="/test" routerDirection="root" class="white">
           <ion-card-header class="ion-text-center">
             <ion-card-subtitle>Saved</ion-card-subtitle>
             <ion-card-title>Course</ion-card-title>
@@ -21,7 +21,7 @@
         </ion-card>
       </ion-col>
       <ion-col>
-        <ion-card routerLink="/person" routerDirection="root">
+        <ion-card routerLink="/person" routerDirection="root" class="white">
           <ion-card-header class="ion-text-center">
             <ion-card-subtitle>Take</ion-card-subtitle>
             <ion-card-title>Test</ion-card-title>
@@ -30,36 +30,18 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  
+
   <div class="ion-padding">
       <ion-label>Community Post</ion-label>
-      <ion-grid>
+      <ion-grid *ngFor="let item of post"  >
         <ion-row>
           <ion-col>
-            <ion-card routerLink="/messages" routerDirection="forward">
+            <ion-card (click)="alert('Hello World')">
               <ion-item lines="none">
                 <ion-avatar slot="start">
-                  <img src="https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_960_720.png" />
+                  <img src="https://cdn.imgbin.com/8/10/16/imgbin-linkedin-computer-icons-logo-social-networking-service-facebook-Sisn3fJcafcZL7ZYinA2mfWaB.jpg" />
                 </ion-avatar>
-                <ion-label>
-                  <h2>Adams Smith - Google</h2>
-                  <p class="location">Lagos, Nigeria</p>
-                </ion-label>
-              </ion-item>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <ion-card routerLink="/messages" routerDirection="forward">
-              <ion-item lines="none">
-                <ion-avatar slot="start">
-                  <img src="https://cdn.pixabay.com/photo/2016/08/20/05/36/avatar-1606914_960_720.png" />
-                </ion-avatar>
-                <ion-label>
-                  <h2>Kate Street - Airbnb</h2>
-                  <p class="location">Lagos, Nigeria</p>
-                </ion-label>
+                <h2>{{item.title}}</h2>
               </ion-item>
             </ion-card>
           </ion-col>

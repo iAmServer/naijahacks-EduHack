@@ -6,26 +6,20 @@
     <ion-title>
       EduHack - Search Course
     </ion-title>
-    <ion-buttons slot="primary">
-      <ion-button routerLink="/search" slot="end">
-        <ion-icon slot="icon-only" name="search"></ion-icon>
-      </ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    <ion-label>Search Course</ion-label>
-    <input ion-input type="search" color="light" placeholder="Search course" />
-    <ion-label>Courses</ion-label>
-    <ion-grid *ngFor="let item of courses" >
+    <ion-label style="margin-bottom: 30px;">Search Course</ion-label>
+    <input style="margin-top: 10px;" [(ngModel)]="search" ion-input type="search" (keyup.enter)="loadData()" color="light" placeholder="Search course" />
+    <ion-grid *ngIf="courses.searches"  *ngFor="let item of courses.searches" >
       <ion-row>
         <ion-col>
           <ion-card routerLink="/details/{{item.id}}" routerDirection="root">
             <ion-item lines="none">
               <ion-label>
-                <h2>{{item.name}}</h2>
+                <h2>{{item.description}}</h2>
               </ion-label>
             </ion-item>
           </ion-card>
